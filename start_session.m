@@ -1,4 +1,4 @@
-config = initialise_session('config_set_1b.mat');
+config = initialise_session();
 
 for block = 1:config.num_blocks
   fprintf('Block %d of %d\n', block, config.num_blocks);

@@ -1,8 +1,13 @@
-function config = initialise_session(config_file)
-  clearvars -EXCEPT config_file;
+function config = initialise_session()
+  clearvars;
   AssertOpenGL;
   
-  load(config_file);
+  config.timestamp = datestr(now);
+  config.log = log4m.getLogger(['logs' filesep datestr(now, 30) '.log']);
+  config.log.info(['Started at: ' config.timestamp]);
+  
+  configure();
+  config.log.info(['Name: ' participant]);
 
   load('sample_list.mat');
   config.samples_dir = 'samples/Steinway & Sons model B Grand Piano';
@@ -18,11 +23,12 @@ function config = initialise_session(config_file)
     config.set_classes{i} = pitch_classes{class_indexes(i)};
   end
   config.response_keys = {'1!', '2@', '3#', '4$', '5%', '6^'};
+  config.key_indexes = Shuffle(1:6);
 
-  config.note_length = 4;
-  config.inter_note_interval = 1.5;
-  config.inter_octave_interval = 0.5;
-  config.num_blocks = 3;
+  config.note_length = 1; %4
+  config.inter_note_interval = 0; %1.5;
+  config.inter_octave_interval = 0; %0.5;
+  config.num_blocks = 1; %3;
   config.participant = participant;
-  config.timestamp = datestr(now);
+  
 end
