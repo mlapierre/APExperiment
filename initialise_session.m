@@ -4,6 +4,8 @@ function config = initialise_session()
   
   config.timestamp = datestr(now);
   config.log = log4m.getLogger(['logs' filesep datestr(now, 30) '.log']);
+  config.log.setCommandWindowLevel(log4m.INFO);
+  config.log.setLogLevel(log4m.DEBUG);
   config.log.info(['Started at: ' config.timestamp]);
   
   configure();

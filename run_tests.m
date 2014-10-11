@@ -11,7 +11,9 @@ config.key_indexes = [4 5 2 1 3 6]; % B Eb Gb Db E D
 trial = 1; % Gb
 %correct_key = config.response_keys{config.key_indexes(note_indexes(trial))};
 %correct_key = config.response_keys{note_indexes(config.key_indexes(trial))};
-correct_key = config.response_keys{config.key_indexes(trial)};
+%correct_key = config.response_keys{config.key_indexes(trial)};
+%correct_key_index = find(config.key_indexes == note_indexes(trial));
+correct_key = config.response_keys{config.key_indexes == note_indexes(trial)}; % Should be 3#
 
 response_key = '2@'; % Eb
 correct = is_response_correct(correct_key, response_key);
