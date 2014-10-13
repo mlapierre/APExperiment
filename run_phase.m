@@ -1,12 +1,12 @@
 function response = run_phase(config, blind)
     note_indexes = Shuffle(1:6);
-    config.log.debug(sprintf('session classes: %s', strjoin(config.set_classes(config.key_indexes))));
+    config.log.debug(sprintf('Session classes: %s', strjoin(config.set_classes(config.key_indexes))));
     for i = 1:6
         clc;
         trial_pitch_class = config.set_classes{note_indexes(i)};
         play_notes(config, trial_pitch_class, blind);
-        fprintf('session classes: %s\n', strjoin(config.set_classes(config.key_indexes)));
-        config.log.debug(sprintf('trial: %s', trial_pitch_class));
+        fprintf('Session classes: %s\n', strjoin(config.set_classes(config.key_indexes)));
+        config.log.debug(sprintf('Trial: %s', trial_pitch_class));
         [response(i).key, response(i).time] = get_response();
         
         config.log.debug(['Response key: ' response(i).key]);
@@ -27,6 +27,6 @@ function response = run_phase(config, blind)
         fprintf('\n');
         WaitSecs(config.inter_note_interval);
     end
-    fprintf('%d correct\n', sum([response(:).correct]));
+    fprintf('%d correct\n\n', sum([response(:).correct]));
 end
 

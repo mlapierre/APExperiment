@@ -27,10 +27,10 @@ function config = initialise_session()
   config.response_keys = {'1!', '2@', '3#', '4$', '5%', '6^'};
   config.key_indexes = Shuffle(1:6);
 
-  config.note_length = 1; %4
-  config.inter_note_interval = 0; %1.5;
-  config.inter_octave_interval = 0; %0.5;
-  config.num_blocks = 1; %3;
+  config.note_length = 4;
+  config.inter_note_interval = 1.5;
+  config.inter_octave_interval = 0.5;
+  config.num_blocks = 3;
   config.participant = participant;
   
 end

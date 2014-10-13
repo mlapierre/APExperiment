@@ -11,7 +11,7 @@ function finalise_session(config, training_results, test_results)
   sessions.test_results(:, :, num_sessions) = test_results;
   sessions.config(num_sessions) = config;
   
-  fprintf('%d sessions completed', num_sessions);
+  fprintf('%d session(s) completed\n', num_sessions);
   save(fn, 'sessions');
 
   PsychPortAudio('Close', config.pahandle);
