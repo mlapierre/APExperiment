@@ -1,6 +1,7 @@
 function config = initialise_session()
   clearvars;
   AssertOpenGL;
+  rng('shuffle');
   
   config.timestamp = datestr(now);
   config.log = log4m.getLogger(['logs' filesep datestr(now, 30) '.log']);
