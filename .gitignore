@@ -1,20 +1,10 @@
 .DS_Store
 *.aiff
 sample.wav
-samples/73352__3bagbrew__piano-harp-up-2.wav
-samples/SalamanderGrandPianoV2_44.1khz16bit/A3v10.wav
-samples/SalamanderGrandPianoV2_44.1khz16bit/A4v10.wav
-samples/SalamanderGrandPianoV2_44.1khz16bit/A5v10.wav
-samples/SalamanderGrandPianoV2_44.1khz16bit/C3v10.wav
-samples/SalamanderGrandPianoV2_44.1khz16bit/C4v10.wav
-samples/SalamanderGrandPianoV2_44.1khz16bit/C4v11.wav
-samples/SalamanderGrandPianoV2_44.1khz16bit/C4v9.wav
-samples/SalamanderGrandPianoV2_44.1khz16bit/C5v10.wav
-samples/SalamanderGrandPianoV2_44.1khz16bit/D#3v10.wav
-samples/SalamanderGrandPianoV2_44.1khz16bit/D#4v10.wav
-samples/SalamanderGrandPianoV2_44.1khz16bit/D#5v10.wav
-samples/SalamanderGrandPianoV2_44.1khz16bit/F#3v10.wav
-samples/SalamanderGrandPianoV2_44.1khz16bit/F#4v10.wav
-samples/SalamanderGrandPianoV2_44.1khz16bit/F#5v10.wav
+samples/*
+samples/SalamanderGrandPianoV2_44.1khz16bit/*
+samples/Steinway & Sons model B Grand Piano/*
 Piano.ff.A3.wav
 *.log
+temp.m
+Untitled.m
